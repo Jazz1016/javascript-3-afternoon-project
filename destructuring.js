@@ -6,6 +6,7 @@
   You can refresh the page at any time to re-run all the tests.
 */
 
+
 ////////// PROBLEM 1 //////////
 
 // Do not edit the code below.
@@ -21,6 +22,10 @@ var carDetails = {
   Use object destructuring to save the property values from the object carDetails into new variables. 
 */
 
+let {color, make, model, year} = carDetails
+
+
+
 //Code Here
 
 
@@ -35,7 +40,7 @@ var carDetails = {
 
 function greeting( obj ) {
   //Code Here
-  
+    let {title, firstName, lastName} = obj
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
@@ -53,6 +58,13 @@ function greeting( obj ) {
   Sum up the values and return the total number.
 */
 
+let totalPopulation = (obj) => {
+  let{utah, california, texas, arizona} = obj
+  obj = utah + california + texas + arizona
+  return obj
+}
+
+
 //Code Here
 
 
@@ -66,6 +78,13 @@ function greeting( obj ) {
   Use object destructuring to save the property values to new variables. 
   Push these new variables to an array and return the array. 
 */
+
+let ingredients = (obj) => {
+  let newArr =[];
+  let{carb, fat, protein} = obj
+    newArr.push(carb, fat ,protein)
+  return newArr
+}
 
 //Code Here
 
@@ -85,6 +104,16 @@ function greeting( obj ) {
   Find the smallest number of the three and return that number.
 */
 
+let largeNumbers = ({first, second, third}) => {
+  if(first < second && first <= third){
+    return first
+  }
+  if(second < first && second < third){
+    return second
+  }
+    return third
+  }
+
 //Code Here
 
 
@@ -96,6 +125,17 @@ function greeting( obj ) {
   The object properties will be named a, b, and c and their values will be arrays of numbers.
   Find the longest array and return that array.
 */
+
+let numberGroups = ({a, b, c}) => {
+  if(a.length > b.length && a.length > c.length){
+    return a
+  }
+  
+  if(b.length > a.length && b.length > c.length){
+    return b
+  }
+  return c
+}
 
 //Code Here
 
